@@ -1,0 +1,7 @@
+﻿.test {
+    color: red;
+}
+
+body {
+    @extend .test;
+}

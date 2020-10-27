@@ -1,0 +1,9 @@
+[
+  {
+    "outputFileName": "wwwroot/bundles/style.min.css",
+    "inputFiles": [
+      "css/*.css"
+    ],
+    "minify": { "enabled": true }
+  }
+]
