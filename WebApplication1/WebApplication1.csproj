@@ -3,9 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Nullable>enable</Nullable>
-
-    <!-- Improve the inner loop development cycle for content files. -->
-    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +15,7 @@
 
   <Target Name="CompileStaticAssets" AfterTargets="PreBuildEvent">
     <Message Text="Running CompileStaticAssets" Importance="high" />
+    <Exec Command="dotnet tool restore" StandardOutputImportance="high" />
     <Exec Command="dotnet webcompiler --zip disable --minify disable -r css" StandardOutputImportance="high" />
   </Target>
 
